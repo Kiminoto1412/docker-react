@@ -15,6 +15,13 @@ use -v(docker volume) to hot reload some changes by that will reference to ur co
 ``` this dont have ":" that's mean try na mapo inside container(docker) to outside container(app) so it's mean dont map "/app/node_modules" to anything
 because that will dont have node_modules on local 
 
+For developement
+```
+docker-compose -f docker-compose-dev.yml up
+docker-compose -f docker-compose-dev.yml up --build
+docker-compose -f docker-compose-dev.yml down
+```
+
 
 # Getting Started with Create React App
 
