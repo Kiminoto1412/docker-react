@@ -1,3 +1,21 @@
+#Docker
+
+```
+docker build -f Dockerfile.dev .
+```
+this is how to run docker.dev file by -f is file that u want to use
+Tips : remove node-modules before build is make faster
+
+```
+docker run -p 3000:3000 -v /app/node_modules -v  $(pwd):/app dbe2aaf87b9d
+```
+use -v(docker volume) to hot reload some changes by that will reference to ur code and rebuild if have some changes
+```
+-v /app/node_modules
+``` this dont have ":" that's mean try na mapo inside container(docker) to outside container(app) so it's mean dont map "/app/node_modules" to anything
+because that will dont have node_modules on local 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
